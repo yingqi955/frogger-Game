@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Froggerclone</string>
+    <string name="title_activity_initial_configuration_screen">InitialConfigurationScreen</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Initial Configuration</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="sprite_1">Sprite 1</string>
+    <string name="sprite_2">Sprite 2</string>
+    <string name="sprite_3">Sprite 3</string>
+    <string name="difficulty_hard">Hard</string>
+    <string name="difficulty_medium">Medium</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="name_field_initial">Name</string>
+    <string name="name_field_hint">Enter your name</string>
+    <string name="start_game_button_text">Start game</string>
+    <string name="welcome_screen_next_text">Get Started</string>
+    <string name="Your_Welcome_To_Cross_The_Roads_and_Rivers">Your Welcome to Cross The Roads and Rivers</string>
+    <string name="points_label">Points:</string>
+    <string name="points_display_default">0</string>
+    <string name="lives_display_default">0</string>
+    <string name="lives_label">Lives:</string>
+    <string name="difficulty_label">Difficulty:</string>
+    <string name="name_display_default">Name</string>
+    <string name="character_sprite_description">Character sprite</string>
+    <string name="game_over">Game Over!</string>
+    <string name="restart_game">restart</string>
+    <string name="exit_game">exit</string>
+</resources>

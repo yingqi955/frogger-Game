@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <Button
+        android:id="@+id/button_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="124dp"
+        android:text="@string/start_game_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/name_field"
+        android:layout_width="236dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="@string/name_field_hint"
+        android:inputType="textPersonName"
+        android:text="@string/name_field_initial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="name" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="44dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="356dp"
+        android:layout_marginEnd="56dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/character1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/sprite_radio_group"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="44dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="56dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/character2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/sprite_radio_group"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="44dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="56dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/character3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/sprite_radio_group"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <RadioGroup
+        android:id="@+id/difficulty_radio_group"
+        android:layout_width="299dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_field">
+
+        <RadioButton
+            android:id="@+id/option_easy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/difficulty_easy" />
+
+        <RadioButton
+            android:id="@+id/option_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/difficulty_medium" />
+
+        <RadioButton
+            android:id="@+id/option_hard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/difficulty_hard" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/sprite_radio_group"
+        android:layout_width="249dp"
+        android:layout_height="151dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/difficulty_radio_group"
+        app:layout_constraintVertical_bias="0.494">
+
+        <RadioButton
+            android:id="@+id/option_sprite_1"
+            android:layout_width="247dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sprite_1" />
+
+        <RadioButton
+            android:id="@+id/option_sprite_2"
+            android:layout_width="248dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sprite_2" />
+
+        <RadioButton
+            android:id="@+id/option_sprite_3"
+            android:layout_width="247dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sprite_3" />
+
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

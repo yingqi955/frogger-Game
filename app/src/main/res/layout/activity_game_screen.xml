@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameScreen">
+
+
+    <TextView
+        android:id="@+id/name_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/name_display_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.874"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/points_label"
+        android:layout_width="64dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1.5dp"
+        android:text="@string/points_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/points_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/points_display_default"
+        app:layout_constraintBottom_toBottomOf="@+id/points_label"
+        app:layout_constraintStart_toEndOf="@+id/points_label"
+        app:layout_constraintTop_toTopOf="@+id/points_label"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lives_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lives_display_default"
+        app:layout_constraintBottom_toBottomOf="@+id/lives_label"
+        app:layout_constraintStart_toEndOf="@+id/lives_label"
+        app:layout_constraintTop_toBottomOf="@+id/points_label"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/lives_label"
+        android:layout_width="64dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/lives_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/points_label" />
+
+    <TextView
+        android:id="@+id/difficulty_label"
+        android:layout_width="63dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/difficulty_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lives_label" />
+
+    <TextView
+        android:id="@+id/difficulty_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/difficulty_easy"
+        app:layout_constraintBottom_toBottomOf="@+id/difficulty_label"
+        app:layout_constraintStart_toEndOf="@+id/difficulty_label"
+        app:layout_constraintTop_toBottomOf="@+id/lives_display"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/River"
+        android:layout_width="412dp"
+        android:layout_height="199dp"
+        android:background="#006699"
+        app:layout_constraintBottom_toTopOf="@+id/Safe_Tile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/log_slot_1"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/character3" />
+
+        <ImageView
+            android:id="@+id/log_slot_2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/log_slot_1"
+            app:srcCompat="@drawable/character3" />
+
+        <ImageView
+            android:id="@+id/log_slot_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="100dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/character3" />
+
+        <ImageView
+            android:id="@+id/log_slot_4"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="150dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/character3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/Safe_Tile"
+        android:layout_width="413dp"
+        android:layout_height="50dp"
+        android:background="@drawable/tile_pic"
+        app:layout_constraintBottom_toTopOf="@+id/Road"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Road"
+        android:layout_width="413dp"
+        android:layout_height="250dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/Start_Tile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/vehicle_slot_1"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/character3" />
+
+        <ImageView
+            android:id="@+id/vehicle_slot_2"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/character3" />
+
+        <ImageView
+            android:id="@+id/vehicle_slot_3"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/character3" />
+
+        <ImageView
+            android:id="@+id/vehicle_slot_4"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/character3" />
+
+        <ImageView
+            android:id="@+id/vehicle_slot_5"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="196dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/character3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/Start_Tile"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/tile_pic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/Goal"
+        android:layout_width="412dp"
+        android:layout_height="102dp"
+        android:background="@drawable/end_tile"
+        app:layout_constraintBottom_toTopOf="@+id/River"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/player_sprite"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/character_sprite_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/character1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
